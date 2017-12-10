@@ -1,9 +1,8 @@
-FROM sameersbn/ubuntu:14.04.20170608
-MAINTAINER sameer@damagehead.com
+FROM debian:latest
 
 ENV BIND_USER=bind \
-    BIND_VERSION=1:9.9.5 \
-    WEBMIN_VERSION=1.8 \
+    BIND_VERSION=1:9.10.6 \
+    WEBMIN_VERSION=1.870 \
     DATA_DIR=/data
 
 RUN rm -rf /etc/apt/apt.conf.d/docker-gzip-indexes \
