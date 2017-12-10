@@ -1,0 +1,14 @@
+sudo: required
+services:
+- docker
+language: bash
+script:
+# build image
+- docker build -t spanghf37/bind .
+
+
+# push image
+- docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
+- docker tag spanghf37/bind spanghf37/bind:latest
+- docker push spanghf37/bind:latest
+
