@@ -7,7 +7,7 @@ ENV BIND_USER=bind \
 
 RUN apt-get update \
     && apt-get upgrade -y \
-    && apt-get install wget -y
+    && apt-get install wget gnupg -y
 
 RUN rm -rf /etc/apt/apt.conf.d/docker-gzip-indexes \
  && wget http://www.webmin.com/jcameron-key.asc -qO - | apt-key add - \
