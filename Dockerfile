@@ -1,8 +1,8 @@
 FROM debian:latest
 
 ENV BIND_USER=bind \
-    BIND_VERSION=1:9.10.6 \
-    WEBMIN_VERSION=1.870 \
+    BIND_VERSION=1:9 \
+    WEBMIN_VERSION=1.8 \
     DATA_DIR=/data
 
 RUN apt-get update \
